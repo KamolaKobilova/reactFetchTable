@@ -160,10 +160,18 @@ function FetchUsers() {
              <li><h4>{item.username}</h4></li>
              <li><h4>{item.email}</h4></li>
            </ul>
-           
+          
           
         ))
+        // document.getElementsByTagName('li'),
+        // 'li'.onClick = function(){
+        //   this.childNode.remove()
+        // }
+
+        
       }
+
+      
 
        
 
@@ -174,3 +182,11 @@ function FetchUsers() {
 
 export default FetchUsers
 
+// var delete = document.querySelectorAll('li');
+//          for(var i=0; i<delete_y.length; i++ ) {
+//              delete[i].onclick = function() {
+//                  this.parentNode.remove()
+//              }
+//          }
+//          document.querySelector('li').value = "";
+//     }
