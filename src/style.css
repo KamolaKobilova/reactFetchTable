@@ -20,6 +20,6 @@ li {
     background-color: white;
     text-align: center;
 }
-li h4:hover{
-    display: none;
+button {
+    margin-top: 20px;
 }
