@@ -150,15 +150,24 @@ function FetchUsers() {
     const updated = data.filter((item) => item.id !== id);
     setData(updated);
   };
+  function clickInfo(e){
+    e.preventDefault()
+      const addInfos = data.filter((item) => item.email && item.id == e.target.value)
+      setData(addInfos)
+
+      
+  }
 
   return (
     <div className="app">
+      <input onChange={clickInfo} type="text" style={{width: 400, height:30,marginLeft:400}} />
       {
+        
         data.map((item, index) => (
           <ul>
             <li style={{ width: "20px" }}>
               {" "}
-              <h4>{item.id}</h4>{" "}
+              <h4>{item.id} </h4>{" "}
             </li>
             <li>
               <h4>{item.name}</h4>
@@ -170,11 +179,13 @@ function FetchUsers() {
               <h4>{item.email}</h4>
             </li>
             <li>
-              <button onClick={() => deleteItem(item.id)}>delete</button>
+              <button onClick={() => deleteItem(item.id)}>delete</button><br />
+
+           
             </li>
           </ul>
         ))
-        
+      
       }
     </div>
   );
